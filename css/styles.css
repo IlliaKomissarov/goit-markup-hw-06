@@ -209,6 +209,7 @@ button {
     cursor: pointer;
 }
 
+
 .form__button {
     display: block;
     width: 200px;
@@ -260,7 +261,7 @@ button {
     transition: opacity 250ms var(--timing-function);
 }
 
-.privacy__icon .icon {
+.privacy__icon .icon-check {
     transition: opacity 250ms var(--timing-function);
 }
 
@@ -270,11 +271,11 @@ button {
     position: relative;
 }
 
-.privacy__icon .icon {
+.privacy__icon .icon-check{
     opacity: 0;
 }
 
-.privacy__input:checked+.privacy__icon .icon {
+.privacy__input:checked+.privacy__icon .icon-check {
     opacity: 1;
     position: absolute;
     transform: translate(0, -10%);
