@@ -104,9 +104,9 @@ button {
     align-items: center;
 }
 
-.backdrop.is-hidden .modal {
-    transform: translate(-50%, -50%) scale(0.9);
-
+.icon-check {
+    justify-content: center;
+        align-items: center;
 }
 
 .modal {
@@ -115,15 +115,14 @@ button {
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
 
-    min-height: 581px;
-    min-width: 528px;
-
+    height: 581px;
+    width: 528px;
+    padding: 40px;
     background-color: var(--white-color);
 
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
     z-index: 2;
-    transition: opacity 250ms var(--timing-function);
 
 }
 
@@ -131,7 +130,6 @@ button {
 
 .form {
     margin: 0 auto;
-    padding: 40px;
 }
 
 .form__text {
@@ -151,7 +149,7 @@ button {
 
 .form__label {
     display: block;
-    padding-bottom: 4px;
+    margin-bottom: 4px;
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.01em;
@@ -164,7 +162,7 @@ button {
     height: 40px;
     border: 1px solid var(--border-form);
     border-radius: 4px;
-    transition: border 250ms var(--timing-function);
+    transition: border-color 250ms var(--timing-function);
 }
 
 .form__textarea {
@@ -182,6 +180,7 @@ button {
     color: rgba(117, 117, 117, 0.5);
 
     transition: border 250ms var(--timing-function);
+    display: block;
 }
 
 .form__textarea::placeholder {
@@ -201,16 +200,13 @@ button {
     fill: var(--accent-color);
 }
 
-.form__input:hover,
-.form__textarea:hover {
-    cursor: pointer;
-    color: var(--accent-color);
-}
+
 
 .form__input:focus,
 .form__textarea:focus {
     border: 1px solid var(--accent-color);
     outline: none;
+    cursor: pointer;
 }
 
 .form__button {
@@ -251,6 +247,7 @@ button {
 .privacy__link {
     border-bottom: 1px solid var(--accent-color);
     color: var(--accent-color);
+    text-decoration: none;
 }
 
 .privacy__icon {
@@ -886,7 +883,7 @@ display: flex;
 margin-left: 70px;
 }
 
-.logo-list .socials-footer {
+.socials-footer {
     display: inline-block;
 }
 
@@ -939,11 +936,12 @@ margin-left: 70px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
-    color: rgba(255, 255, 255, 0.6);
+    color: var(--black-color);
     font-size: 16px;
     line-height: 1.25;
     letter-spacing: 0.03em;
     transition: background 250ms var(--timing-function);
+    outline: none;
 }
 
 .subscribe input:focus {
@@ -953,6 +951,7 @@ margin-left: 70px;
         linear-gradient(0deg,
             rgba(255, 255, 255, 0.3),
             rgba(255, 255, 255, 0.3));
+            border: 1px solid var(--accent-color);
 }
 
 .subscribe button {
