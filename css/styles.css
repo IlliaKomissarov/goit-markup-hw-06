@@ -266,19 +266,19 @@ button {
 }
 
 .privacy__input:checked+.privacy__icon {
-    border-color: transparent;
-    background-color: var(--accent-color);
     position: relative;
 }
 
 .privacy__icon .icon-check{
     opacity: 0;
+    transition: opacity 250ms var(--timing-function), transform 250ms var(--timing-function);
 }
 
 .privacy__input:checked+.privacy__icon .icon-check {
     opacity: 1;
     position: absolute;
     transform: translate(0, -10%);
+    transform: translate(-1px, -1px);
 }
 
 .hidden {
@@ -937,7 +937,7 @@ margin-left: 70px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
-    color: var(--black-color);
+    color: var(--prmary-text-color);
     font-size: 16px;
     line-height: 1.25;
     letter-spacing: 0.03em;
@@ -946,13 +946,7 @@ margin-left: 70px;
 }
 
 .subscribe input:focus {
-    background: linear-gradient(0deg,
-            rgba(33, 150, 243, 0),
-            rgba(33, 150, 243, 0)),
-        linear-gradient(0deg,
-            rgba(255, 255, 255, 0.3),
-            rgba(255, 255, 255, 0.3));
-            border: 1px solid var(--accent-color);
+border: 1px solid var(--accent-color);
 }
 
 .subscribe button {
